@@ -1,0 +1,19 @@
+{
+  "name": "altr-code-challenge",
+  "version": "1.0.0",
+  "description": "Webserver with a success and failure endpoints that tracks the number of calls within a minute",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcappleman/altr-code-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcappleman/altr-code-challenge/issues"
+  },
+  "homepage": "https://github.com/mcappleman/altr-code-challenge#readme"
+}
