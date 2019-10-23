@@ -20,7 +20,7 @@ Router.get('/get/:data', async (req, res, next) => {
             }
         }
 
-        return res.send(result);
+        return res.status(result.status).send(result);
 
     } catch(e) {
         return res.send({

@@ -2,7 +2,6 @@
 
 var express  	= require('express');
 var app      	= express();
-var rateLimit	= require('express-rate-limit');
 
 const ROOT_DIR = process.env.ROOT_DIR = __dirname;
 
@@ -16,12 +15,8 @@ app.use((req, res, next) => {
 
 });
 
-var limiter = rateLimit({
-	windowMs: 1 * 60 * 1000,
-	max: 10
-});
-
-app.use(limiter)
+var rate_limiter = require(`${ROOT_DIR}/api/middleware/RateLimiter`);
+app.use(rate_limiter.limiter);
 
 var apiRoutes = require(`${ROOT_DIR}/api/routes/ALTRRoutes`);
 
